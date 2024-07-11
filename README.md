@@ -34,24 +34,31 @@ import (
 
 // Define interactive component with an *Interactable field
 type Component struct {
-	interaction *bubbleinteract.Interactable
+	interaction *teaspoon.Interactable
 }
 
 // Add GetInteraction() *Interactable method to return the field
-func (c Component) GetInteraction() *bubbleinteract.Interactable {
+func (c Component) GetInteraction() *teaspoon.Interactable {
 	return c.interaction
 }
 
+// Example main model containing our component
+type MainModel struct{
+    tea.Model
+    component Component
+}
+
 // Initialize as few or many handlers required when creating component
-component := Component{
-    label: label,
-    interaction: &bubbleinteract.Interactable{
-        ID: zone.NewPrefix(),
-        Click: &bubbleinteract.ClickHandler{},
-        Hover: &bubbleinteract.HoverHandler{},
-        Drop: &bubbleinteract.DropHandler{},
-        DragEvent: &bubbleinteract.DragEventHandler{},
-    },
+mainModel := MainModel{
+    component: Component{
+        interaction: &teaspoon.Interactable{
+            ID: zone.NewPrefix(),
+            Click: &teaspoon.ClickHandler{},
+            Hover: &teaspoon.HoverHandler{},
+            Drop: &teaspoon.DropHandler{},
+            DragEvent: &teaspoon.DragEventHandler{},
+        },
+    }
 }
 
 // Incorporate HandleMouseMsg and/or HandleExternalEvent functions into the Update pipeline
