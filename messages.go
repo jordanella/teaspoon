@@ -6,10 +6,6 @@ import (
 
 //?--------------------------------------------------------------------------------------------------------------------
 
-//?--------------------------------------------------------------------------------------------------------------------
-
-//?--------------------------------------------------------------------------------------------------------------------
-
 //* Mouse Message Handling
 /*
  - Responds to mouse messages with LocalHandler function or DefaultLocalHandler if it is not defined
@@ -117,7 +113,7 @@ func (i *Interactable) HandleExternalEvent(element Interactive, mouseMsg tea.Mou
 	return i.DefaultExternalHandler(element, mouseMsg)
 }
 
-//* Mouse Message Handling
+//* External Event Handling
 /*
  - Interprets external event messages to direct the appropriate interaction handlers
 */
