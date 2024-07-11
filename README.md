@@ -13,7 +13,7 @@ TeaSpoon is a Go package that provides interactive elements for terminal user in
 ## Installation
 
 ```bash
-go get github.com/jordanella/bubbleinteract
+go get github.com/jordanella/teaspoon
 ```
 
 ## Quick Start
