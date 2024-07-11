@@ -18,7 +18,7 @@ go get github.com/jordanella/teaspoon
 
 ## Quick Start
 
-Here's a simple example of how to use BubbleInteract:
+Here's a simple example of how to use TeaSpoon:
 
 ```go
 package main
